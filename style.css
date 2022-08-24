@@ -25,6 +25,7 @@ html {
 #coming {
     display: block;
     margin: auto;
+    padding-top: 3em;
     width: 60em;
 }
 
