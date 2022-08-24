@@ -17,11 +17,13 @@ html {
 #coming {
     display: block;
     margin: auto;
+    width: 60em;
 }
 
 /* style du header */
 
 #header {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,13 +47,73 @@ html {
 
 
 #header #social_network {
-    width: 10%;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #header #social_network img {
-    width: 30px;
+    width: 2.2em;
     margin: 0 0.4em;
 }
+
+
+
+
+/* responsive */
+@media screen and (max-width:1566px) {
+
+    body,
+    html {
+        font-size: 12px;
+    }
+
+    #header {
+
+        height: 15vh;
+    }
+
+    @media screen and (max-width:1120px) {
+
+        body,
+        html {
+            font-size: 10px;
+        }
+
+        #header {
+
+            height: 10vh;
+        }
+
+        #header #title_fidec {
+            font-size: 2.8em;
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width:976px) {
+
+        body,
+        html {
+            font-size: 8px;
+        }
+
+        #header #title_fidec {
+            font-size: 2.8em;
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width:700px) {
+
+        body,
+        html {
+            font-size: 6px;
+        }
+
+        #header #title_fidec {
+            font-size: 2.8em;
+            text-align: center;
+        }
+    }
