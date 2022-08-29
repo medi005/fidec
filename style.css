@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Maze&display=swap');
 *,
 ::before,
 ::after {
@@ -16,8 +18,8 @@
 
 body,
 html {
-    font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    font-family: Poppins, Arial, sans-serif;
     background-color: var(--gris);
     color: var(--black);
 }
@@ -25,8 +27,8 @@ html {
 #coming {
     display: block;
     margin: auto;
-    padding-top: 3em;
-    width: 60em;
+    padding-top: 3rem;
+    width: 60rem;
 }
 
 /* style du header */
@@ -38,7 +40,7 @@ html {
     align-items: center;
     height: 20vh;
     background: linear-gradient(90deg, var(--forange) 10%, var(--orange));
-    padding: 0.5em 1em;
+    padding: 0.5rem 1rem;
 }
 
 #header #logo {
@@ -48,7 +50,7 @@ html {
 }
 
 #header #title_fidec {
-    font-size: 3.2em;
+    font-size: 3.2rem;
     color: rgb(0, 0, 0);
     font-family: "Rubik Maze";
     font-weight: 200;
@@ -63,8 +65,8 @@ html {
 }
 
 #header #social_network img {
-    width: 2.2em;
-    margin: 0 0.4em;
+    width: 2.2rem;
+    margin: 0 0.4rem;
 }
 
 /* Style de la navbar */
@@ -72,31 +74,47 @@ html {
 #navbar {
     background-color: #fff;
     height: 7vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     box-shadow: 1px 0 5px rgb(161, 158, 158);
 }
 
-#navbar a {
-    display: block;
-    padding: 0.5em;
-    font-size: 1.2em;
-    font-family: Arial;
-    font-weight: bold;
-    color: var(--black);
+#navbar_links{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.3s ease-in-out;
+}
+.navbar_link > a{
+     color: var(--black);
+     text-decoration: none;
+     text-transform: uppercase;
+     font-weight: bold;
 }
 
-#navbar a:hover {
-    border-bottom: 5px solid var(--green);
-    color: var(--green);
-    transition: 0.3s ease-in-out;
+
+.navbar_link > a::after{
+    display: block;
+    content: "";
+    width: 0%;
+    height: 0.2rem;
+    background-color: #000;
+     transition: width 0.4s ease-in-out;
 }
 
-/* responsive */
+.navbar_link:hover > a::after{
+width: 100%;
+}
+
+.burger_boutton{
+    display: none;
+}
+
+
+
+/*
+
 @media screen and (max-width:1566px) {
 
     body,
@@ -122,7 +140,7 @@ html {
         }
 
         #header #title_fidec {
-            font-size: 2.8em;
+            font-size: 2.8rem;
             text-align: center;
         }
     }
@@ -135,21 +153,33 @@ html {
         }
 
         #header #title_fidec {
-            font-size: 2.8em;
+            font-size: 2.8rem;
             text-align: center;
         }
     }
 
-    @media screen and (max-width:700px) {
+    @media screen and (max-width:768px){
 
         body,
         html {
-            font-size: 6px;
+            font-size: 8px;
         }
 
         #header #title_fidec {
             font-size: 2.8em;
             text-align: center;
         }
+
+        .burgernav #navbar{
+            height: 100vh;
+            width: 30vh;
+            position: absolute;
+            top: 0;
+            right:0;
+            flex-direction: column;
+            justify-content: flex-start;
+            font-size: 1.5em
+        }
+
     }
-}
+}*/
